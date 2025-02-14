@@ -89,7 +89,7 @@ public class P12981_DNA비밀번호 {
                     checkSecret--;
                 myArr[3]--;
                 break;
-        }
+            }
         }
     }
 
