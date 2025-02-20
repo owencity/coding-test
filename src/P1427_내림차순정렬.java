@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class P1427_내림차순정렬 {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
         int A[] = new int[str.length()];
@@ -26,6 +27,7 @@ public class P1427_내림차순정렬 {
                 System.out.print(A[i]);
             }
         }
+        // 최소 최댓값을 찾아 제일앞에 있는 데이터와 스왑
     }
 
 
