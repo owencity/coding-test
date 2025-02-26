@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Programmers_같은숫자는싫어 {
     public static void main(String[] args) {
 // main 메서드 안에 solution 메서드를 선언할수 없다.
@@ -22,26 +24,32 @@ public class Programmers_같은숫자는싫어 {
         int[] result = solution(arr);
 
         // 결과 출력
-        for (int num : result) {
-            System.out.println(num + " ");
-        }
+
+            System.out.println(Arrays.toString(result));
+
     }
 
     public static int[] solution(int[] arr) {
         int count = 1; // 결과 배열 크기 계산용
+        // 왜? 1 인가? 기본적인요소는 무조건 1개가 있을테니까
         for(int i = 1; i < arr.length; i++) {
             if(arr[i] != arr[i-1]) {
                 count++;
             }
         }
+        // 같은수 제외, 중복숫자 제거한 총 수 count
 
         int [] answer = new int[count];
+        // 중복제거한 수 담을 배열크기 선언
         answer[0] = arr[0];
+        // 첫요소 담아 두기
         int index = 1;
-
+        // 0번째 인덱스 이후 1번째 인덱스부터 값 담아두기위한 index값 설정
         for(int i = 1; i<arr.length; i++) {
             if(arr[i] != arr[i - 1]) {
                 answer[index++] = arr[i];
+                // arr index 와 index-1 비교 , 같지않으면 answer에 담아두기
+                // index 후순위증감, 값 저장 이후 index 증감
             }
         }
 
